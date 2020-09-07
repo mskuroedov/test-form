@@ -68,7 +68,7 @@ export default {
       });
       if (response.ok) {
         let json = await response.json();
-        console.log(json)
+        //console.log(json)
         if (json.success) {
           this.$emit('success')
         } else {
