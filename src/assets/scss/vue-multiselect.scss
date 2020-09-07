@@ -1,0 +1,125 @@
+.multiselect {
+
+  &.multiselect--disabled {
+    .multiselect__tags, .multiselect__single {
+      cursor: no-drop;
+      background: #ededed;
+      color: #a6a6a6;
+    }
+  }
+
+  .multiselect__single {
+    white-space: nowrap;
+  }
+
+  &.multiselect--active, &:hover {
+    .multiselect__tags {
+      border-color: #757D85
+    }
+
+    .multiselect__select {
+      border-color: #757D85;
+
+      &:after {
+        background-color: #757D85;
+      }
+
+    }
+  }
+
+  &.multiselect--active {
+    .multiselect__select {
+      &:after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: auto;
+        top: auto;
+        right: 0;
+        height: 100%;
+        width: 1px;
+        background-color: #757D85;
+      }
+    }
+  }
+
+  .multiselect__placeholder {
+    padding-top: 4px;
+    padding-left: 6px;
+  }
+
+  .multiselect__select {
+    transition: none;
+    height: calc(100% - 2px);
+    top: 1px;
+
+    &:after {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      height: 100%;
+      width: 1px;
+      background-color: #D3D7DC;
+      transition: background-color .2s;
+    }
+
+    /*border-left: 1px solid #D3D7DC;*/
+  }
+
+  .multiselect__tags {
+    border: 1px solid #D3D7DC;
+    border-radius: 2px;
+    font-size: 11px;
+    transition: all .2s;
+    color: #555555;
+  }
+
+  .multiselect__tag-icon {
+    line-height: 19px;
+
+    &:after {
+      color: white;
+    }
+  }
+
+  .multiselect__input, .multiselect__single {
+    padding-left: 6px;
+    font-size: 11px;
+    margin-bottom: 0;
+    line-height: 26px;
+    cursor: pointer;
+  }
+
+  .multiselect__content-wrapper {
+    border-color: #757D85
+  }
+
+  .multiselect__option--highlight,
+  .multiselect__option--selected.multiselect__option--highlight {
+    background: #5897fb;
+    color: #fff;
+  }
+
+  .multiselect__option {
+    display: block;
+    padding: 6px 12px;
+    min-height: 20px;
+    line-height: 16px;
+    text-decoration: none;
+    text-transform: none;
+    vertical-align: middle;
+    position: relative;
+    cursor: pointer;
+    white-space: nowrap;
+    font-size: 11px;
+
+    &:after {
+      white-space: nowrap;
+      line-height: 28px;
+      background: #5897fb;
+      font-size: 11px;
+      color: #fff;
+    }
+  }
+}
